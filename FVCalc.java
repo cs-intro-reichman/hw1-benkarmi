@@ -2,12 +2,11 @@
 public class FVCalc {
 	public static void main(String[] args){
 		int currentValue = Integer.parseInt(args[0]);
-		int annualRate = Integer.parseInt(args[1]);
+		double annualRate = Double.parseDouble(args[1]);
 		int years = Integer.parseInt(args[2]);
-		double annualRate1 = (double) annualRate;
 
 		double rate = annualRate / 100.0;
 		int futureValue = (int) (currentValue * Math.pow(1 + rate, years));
-		System.out.println("After " + years + " years, " + "$" + currentValue + " saved at " + annualRate1 + "% will yield $" + futureValue);
+		System.out.println("After " + years + " years, " + "$" + currentValue + " saved at " + annualRate + "% will yield $" + futureValue);
 	}
 }
